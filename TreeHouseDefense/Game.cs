@@ -12,14 +12,27 @@ namespace TreeHouseDefense
         {
 
             Map map = new Map(8,5);
-            Point point = new Point(2, 3);
-            Point point1 = new Point(0, 5);
 
-            bool IsOnMap = map.OnMap(new MapLocation(8,5));
+            try
+            {
+                MapLocation maplocation = new MapLocation(20, 15, map);
+            }
 
-            Console.WriteLine("{0}", IsOnMap);
-            Console.WriteLine("{0}", point.DistanceTo(point1));
-            Console.ReadKey();
+           
+            catch (OutOfBoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.ReadKey();
+            }
+            catch (TreeHouseDefenseException)
+            {
+                Console.WriteLine("Unhandled TreeHouseDefenseException");
+            }
+            catch (Exception )
+            {
+                Console.WriteLine("Unhandled Exception");
+            }
+         
         }
     }
 }
