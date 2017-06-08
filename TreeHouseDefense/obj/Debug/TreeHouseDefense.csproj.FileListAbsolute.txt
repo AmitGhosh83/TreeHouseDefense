@@ -1,0 +1,6 @@
+C:\Users\v-amigh\Source\Repos\TreeHouseDefense\TreeHouseDefense\TreeHouseDefense\obj\Debug\TreeHouseDefense.csprojResolveAssemblyReference.cache
+C:\Users\v-amigh\Source\Repos\TreeHouseDefense\TreeHouseDefense\TreeHouseDefense\bin\Debug\TreeHouseDefense.exe.config
+C:\Users\v-amigh\Source\Repos\TreeHouseDefense\TreeHouseDefense\TreeHouseDefense\bin\Debug\TreeHouseDefense.exe
+C:\Users\v-amigh\Source\Repos\TreeHouseDefense\TreeHouseDefense\TreeHouseDefense\bin\Debug\TreeHouseDefense.pdb
+C:\Users\v-amigh\Source\Repos\TreeHouseDefense\TreeHouseDefense\TreeHouseDefense\obj\Debug\TreeHouseDefense.exe
+C:\Users\v-amigh\Source\Repos\TreeHouseDefense\TreeHouseDefense\TreeHouseDefense\obj\Debug\TreeHouseDefense.pdb

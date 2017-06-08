@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace TreeHouseDefense
 {
-    class Game
+    class Point
     {
-        static void Main(string[] args)
+        public readonly int X;
+        public readonly int Y;
+
+        public Point( int x, int y)
         {
-
-            Map map = new Map(8,5);
-
-
-            Console.ReadKey();
+            X = x;
+            Y = y;
         }
     }
 }
