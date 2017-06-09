@@ -8,5 +8,17 @@ namespace TreeHouseDefense
 {
     class Path
     {
+        private MapLocation[] _path;
+        private int pathstep;
+
+        public Path(MapLocation[] path)
+        {
+            _path = path;
+        }
+
+        public MapLocation GetLocationAt(int pathstep)
+        {
+           return (pathstep < _path.Length) ? _path[pathstep] : null;
+        }
     }
 }

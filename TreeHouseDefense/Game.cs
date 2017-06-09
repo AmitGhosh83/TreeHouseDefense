@@ -15,7 +15,25 @@ namespace TreeHouseDefense
 
             try
             {
-                MapLocation maplocation = new MapLocation(20, 15, map);
+                Path path = new Path(
+                                     new[] 
+                                        {
+                                            new MapLocation(0, 2, map),
+                                            new MapLocation(1, 2, map),
+                                            new MapLocation(2, 2, map),
+                                            new MapLocation(3, 2, map),
+                                            new MapLocation(4, 2, map),
+                                            new MapLocation(5, 2, map),
+                                            new MapLocation(6, 2, map),
+                                            new MapLocation(7, 2, map),
+                                            
+                                        }
+                                   );
+
+
+                MapLocation location = path.GetLocationAt(8);
+                Console.WriteLine(location.X+" and " + location.Y);
+                Console.ReadKey();
             }
 
            
@@ -27,10 +45,12 @@ namespace TreeHouseDefense
             catch (TreeHouseDefenseException)
             {
                 Console.WriteLine("Unhandled TreeHouseDefenseException");
+                Console.ReadKey();
             }
-            catch (Exception )
+            catch (Exception ex)
             {
-                Console.WriteLine("Unhandled Exception");
+                Console.WriteLine("Unhandled Exception"+ ex);
+                Console.ReadKey();
             }
          
         }
