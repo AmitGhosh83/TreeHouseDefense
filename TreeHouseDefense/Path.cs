@@ -10,6 +10,12 @@ namespace TreeHouseDefense
     {
         private MapLocation[] _path;
         private int pathstep;
+        public int Length
+        { get
+            {
+                return _path.Length;
+            }
+        }
 
         public Path(MapLocation[] path)
         {

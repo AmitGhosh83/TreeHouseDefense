@@ -31,9 +31,7 @@ namespace TreeHouseDefense
                                    );
 
 
-                MapLocation location = path.GetLocationAt(8);
-                Console.WriteLine(location.X+" and " + location.Y);
-                Console.ReadKey();
+              
             }
 
            
