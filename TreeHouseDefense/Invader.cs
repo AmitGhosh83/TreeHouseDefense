@@ -12,6 +12,7 @@ namespace TreeHouseDefense
         private Path _path;
         public int Health { get; private set; } = 2; // We could have done it in Constructor itself
 
+
         public MapLocation Location
         {
             get
@@ -46,7 +47,11 @@ namespace TreeHouseDefense
       
         public void Move()=> _pathStep += 1;
 
-        public void DecreaseHealth(int factor) => Health -=  factor;
+        public void DecreaseHealth(int factor)
+
+        {
+            Health -= factor;
+        }
     
       
     }
