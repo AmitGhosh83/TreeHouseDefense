@@ -8,7 +8,7 @@ namespace TreeHouseDefense
 {
     class Level
     {
-        public Tower[] towers { get; set; }
+        public Tower[] Towers { get; set; }
 
         private readonly Invader[] _invaders;
 
@@ -17,13 +17,15 @@ namespace TreeHouseDefense
             _invaders = invaders;
         }
 
+        // Returns True if Player Wins, False otherwise
+
         public bool Play()
         {
             int remainingInvaders = _invaders.Length;
 
             while(remainingInvaders>0)
             {
-                foreach(Tower tower in towers)
+                foreach(Tower tower in Towers)
                 {
                     tower.FireOnInvaders(_invaders);
                 }
@@ -38,7 +40,7 @@ namespace TreeHouseDefense
                         {
                             return false;
                         }
-                        remainingInvaders += 1;
+                        remainingInvaders ++;
                     }
                 }
             }

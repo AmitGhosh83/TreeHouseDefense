@@ -16,7 +16,7 @@ namespace TreeHouseDefense
         {
             if (location.X == 0 && location.Y == 2)
             {
-                throw new Exception();
+                throw new OutOfBoundException();
             }
             else
                 _location = location;
@@ -24,24 +24,24 @@ namespace TreeHouseDefense
 
         public void FireOnInvaders(Invader[] invaders)
         {
-            //foreach(Invader invader in invaders)
+            foreach (Invader invader in invaders)
+            {
+                if (invader.IsActive && _location.InRangeOf(invader.Location, _range))
+                {
+                    invader.DecreaseHealth(_power);
+                    break;
+                }
+            }
+
+            //for(int i=0; i< invaders.Length; i++)
             //{
-            //    if(_location.InRangeOf(invader.Location,1))
+            //    if (invaders[i].IsActive && _location.InRangeOf(invaders[i].Location,_range))
             //    {
-            //        invader.DecreaseHealth(1);
-            //            break;
+            //        invaders[i].DecreaseHealth(_power);
+            //        break;                        
             //    }
             //}
 
-            for(int i=0; i< invaders.Length; i++)
-            {
-                if (invaders[i].IsActive && _location.InRangeOf(invaders[i].Location,_range))
-                {
-                    invaders[i].DecreaseHealth(_power);
-                    break;                        
-                }
-            }
-            
         }
     }
 }
